@@ -9,7 +9,11 @@
         android:label="LoginRegisterFragment" >
         <action
             android:id="@+id/action_loginRegisterFragment_to_loggedInFragment"
-            app:destination="@id/loggedInFragment" />
+            app:destination="@id/loggedInFragment"
+
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/loggedInFragment"
@@ -17,6 +21,10 @@
         android:label="LoggedInFragment" >
         <action
             android:id="@+id/action_loggedInFragment_to_loginRegisterFragment"
-            app:destination="@id/loginRegisterFragment" />
+            app:destination="@id/loginRegisterFragment"
+
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"/>
     </fragment>
 </navigation>
